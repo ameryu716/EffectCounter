@@ -1,3 +1,4 @@
+import {Toast} from './NativeSimpleToast/dist/index.js';
 
 class Counter {
     constructor() {
@@ -9,6 +10,7 @@ class Counter {
         const localCount = localStorage.getItem(this.local_key);
         if(localCount !== null){
             this.count = localCount;
+            new Toast({message:'カウント情報を復元しました。',icon:'info',duration: 5000});
         } 
     }
 
@@ -20,6 +22,7 @@ class Counter {
     counterReset(){
         this.count = 0;
         localStorage.removeItem(this.local_key);
+        new Toast({message:'カウント情報をリセットしました。',icon:'warn',duration:5000});
     }
 }
 

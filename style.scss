@@ -1,4 +1,6 @@
-@import "/node_modules/toastify-js/src/toastify.css";
+@import "./NativeSimpleToast/style.scss";
+
+
 body {
     margin: 0;
     background-color: #222;
@@ -16,6 +18,13 @@ body {
         font-size: 1.5rem;
         font-weight: bold;
     }
+
+    
+
+
+
+
+
 }
 main {
     width: 600px;
@@ -26,6 +35,7 @@ main {
     left: calc(50% - 300px);
     background-color: rgba($color: #fff, $alpha: 50%);
 
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,6 +53,7 @@ main {
 
         font-family: cursive;
     }
+
 
     
 }

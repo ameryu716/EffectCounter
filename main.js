@@ -20,6 +20,7 @@ class Counter {
     }
 
     counterReset(){
+        if(!confirm('リセットしますか？')) return;
         this.count = 0;
         localStorage.removeItem(this.local_key);
         new Toast({message:'カウント情報をリセットしました。',icon:'warn',duration:5000});
